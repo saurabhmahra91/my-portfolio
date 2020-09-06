@@ -10,3 +10,4 @@ class Message(models.Model):
     message_text = models.CharField(max_length = 500)
     date_published = models.DateTimeField(auto_now=True)
 
+
