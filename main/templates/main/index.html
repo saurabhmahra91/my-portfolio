@@ -1,0 +1,376 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+        <title>Welcome to my Webpage</title>
+
+    </head>
+
+    <body>
+
+        <nav>
+
+
+            <div class="left-nav-menu nav-child">
+                <a href="#" class="navbar-item-text">
+                    HOME
+                </a>
+                <a href="#connect" class="navbar-item-text">CONTACT ME</a>
+                <a href="#hobbies" class="navbar-item-text"> MY HOBBIES</a>
+                <a href="#day" class="navbar-item-text">PRESENT SCHEDULE</a>
+
+            </div>
+
+            <div class="social nav-child">
+
+
+
+
+                <a href="https://www.facebook.com/saurabh.mahra.148" target="_blank"> <img
+                        src={% static 'main/images/facebook.png' %} alt="" class="social-handle-icon"></a>
+                <a href="https://www.instagram.com/difficult_saurabh/" target="_blank"> <img
+                        src={% static 'main/images/instagram.png' %} alt="" class="social-handle-icon"></a>
+                <a href="https://github.com/saurabhmahra91" target="_blank"> <img
+                        src={% static 'main/images/twitter.png' %} alt="" class="social-handle-icon"></a>
+
+            </div>
+
+        </nav>
+
+        <div class="main">
+
+            <div class="section section-1">
+
+                <h1 class="section-1-item h1" id="i-hate-losing">
+                    I HATE LOSING
+                </h1>
+
+                <p class="section-1-item yellow-text-in-front-page" id="give-myself-challenge">
+                    I give myself a challenge Beat my own and feel the ecstasy.
+                </p>
+
+                <p class="variable-text yellow-text-in-front-page" id="competitive">yeah!, I am competitive<br><span
+                        class="txt-rotate" data-period="2000" data-rotate='["really competitive"]'></span></p>
+
+
+            </div>
+            <hr class="seperator">
+            </hr>
+
+        </div>
+
+
+
+
+        <div class="section-2 section"  id="section-2">
+            <div class="contacts-container">
+                <a onclick="switch_contact_menu();">
+                    <img src='../../static/main/images/cancel.png' width="50px" height='50px' id='close'>
+                </a>
+
+
+
+                <h1 id="touch">Get In Touch</h1>
+
+               
+
+                <form name='form' action="{% url 'index' %}" method='POST'>
+                    {% csrf_token %}
+
+                    {{ form }}
+
+                    {% comment %} id="message" onfocus="clearAll()" onfocusout="showSent()" {% endcomment %}
+                    {% comment %} <input type="text" name="message"> {% endcomment %}
+                    {% comment %} <input type="submit" value="login"> {% endcomment %}
+                    {% comment %} #name only is used: tutorialspoint {% endcomment %}
+
+
+                </form>
+
+          
+
+
+                <div id="filler-container">
+                    <h1 id="filler1" class='filler'>
+                        Whatsapp: 9644086265
+                    </h1>
+                    <h1 id="filler2" class='filler'>
+                        Mail: sourabhmahra91@gmail.com
+                    </h1>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+        <div class="section-3 section">
+            <p>
+                I love programming. Fixing a bug releases dopamine inside me.
+                that feeling is just like when you win a game. I'm a tinkerer too.
+                I'm always Passionate about Physics and Mathematics.
+                presently I'm into Machine Learning.
+                Apart from that, I play football (I &#10084 barca btw).
+                shinchan episodes run through my veins.
+
+
+            </p>
+        </div>
+
+
+
+        <div class="section-4 section">
+
+            <h2>
+                Topic's I'm Exploring
+            </h2>
+            <div class="left-section-4">
+                <div class="progress-bar-container">
+                    <p>REGEX</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>Debugging</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>ML</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>Front-End</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>Back-End</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>CC</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>Android</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>Databases</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>Data Analysis</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right-section-4">
+                <div class="progress-bar-container">
+                    <p>Cam Work</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>PS</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>Networking</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>R-Pi</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>Linux</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>PP</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <p>Maths and Physics</p>
+                    <div class="progress progress-moved">
+                        <div class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+        <div class="section section-5">
+
+
+            <h1 class="present"><span class="blue">&lt;</span>Present<span class="blue">&gt;</span>
+                <span class="yellow">Schedule</span></h1>
+            <div class="hash-link" name="day" id="day"></div>
+
+
+            <table class="container" id="tt">
+                <thead>
+                    <tr>
+                        <th>
+                            <h1>Time/Day</h1>
+                        </th>
+                        <th>
+                            <h1>8:30-9:25</h1>
+                        </th>
+                        <th>
+                            <h1>9:30-10:25</h1>
+                        </th>
+                        <th>
+                            <h1>10:35-11:30</h1>
+                        </th>
+                        <th>
+                            <h1>11:35-12:30</h1>
+                        </th>
+                        <th>
+                            <h1>2:00-3:25</h1>
+                        </th>
+                        <th>
+                            <h1>3:30-4:55</h1>
+                        </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>CE221</td>
+                        <td>HS101</td>
+                        <td>CE223</td>
+                        <td>EE101</td>
+                        <td>CE221</td>
+                        <td>MA207</td>
+
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>EE101</td>
+                        <td>CE221</td>
+                        <td>HS101</td>
+                        <td>CE223</td>
+                        <td>CE231</td>
+                        <td>MA207</td>
+
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td></td>
+                        <td>CS601</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>CE223</td>
+                        <td>EE101</td>
+                        <td>CE221</td>
+                        <td>HS101</td>
+                        <td></td>
+                        <td>MA207</td>
+
+                    </tr>
+                    <tr>
+                        <td>friday</td>
+                        <td></td>
+                        <td>CS601</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        </div>
+
+
+        <script src="{% static 'main/js/script.js' %}"></script>
+
+    </body>
+
+</html>
